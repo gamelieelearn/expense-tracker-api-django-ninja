@@ -20,4 +20,4 @@ class Expense(models.Model):
     date = models.DateField()
 
     def __str__(self):
-        return self.owner.name + ' - ' + self.category + ' - ' + str(self.amount) + ' - ' + str(self.date)
+        return self.owner.username + ' - ' + self.category + ' - ' + str(self.amount) + ' - ' + str(self.date)
