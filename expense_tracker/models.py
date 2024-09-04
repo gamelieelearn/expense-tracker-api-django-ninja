@@ -17,7 +17,7 @@ class Expense(models.Model):
     category = models.CharField(max_length=100, choices=ExpenseCategory.choices)
     description = models.TextField()
     owner = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
-    date = models.DateField()
+    time = models.DateTimeField()
 
     def __str__(self):
-        return self.owner.username + ' - ' + self.category + ' - ' + str(self.amount) + ' - ' + str(self.date)
+        return self.owner.username + ' - ' + self.category + ' - ' + str(self.amount) + ' - ' + str(self.time)
